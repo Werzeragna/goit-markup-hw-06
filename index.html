@@ -407,11 +407,82 @@
             </li>
           </ul>
         </div>
+        <div class="footer-feedback">
+          <p class="footer-feedback-title">Підпишіться на розсилку</p>
+          <div class="footer-feedback-input-wrap">
+            <input
+              type="email"
+              class="footer-feedback-input"
+              name="footer-feedback-email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="button footer-feedback-button">
+              Підписатися
+              <svg class="footer-feedback-button-icon">
+                <use
+                  class="footer-feedback-send"
+                  href="./img/icons.svg#icon-send"
+                  width="24"
+                  height="24"
+                ></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
     <!-- Модальне вікно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <form name="callback-form" novalidate class="modal-callback-form">
+          <h3 class="modal-title">Залиште свої дані, ми вам передзвонимо</h3>
+          <label class="modal-form">
+            <span class="modal-form-name">Ім'я</span>
+            <input type="text" name="modal-user-name" class="callback-form-input" autofocus />
+            <svg class="icon callback-form-icon" width="18" height="18">
+              <use href="./img/icons.svg#icon-person"></use>
+            </svg>
+          </label>
+          <label class="modal-form">
+            <span class="modal-form-name">Телефон</span>
+            <input type="tel" name="modal-user-tel" class="callback-form-input" />
+            <svg class="icon callback-form-icon" width="18" height="18">
+              <use href="./img/icons.svg#icon-phone"></use>
+            </svg>
+          </label>
+          <label class="modal-form">
+            <span class="modal-form-name">Пошта</span>
+            <input type="email" name="modal-user-email" class="callback-form-input" />
+            <svg class="icon callback-form-icon" width="18" height="18">
+              <use href="./img/icons.svg#icon-email"></use>
+            </svg>
+          </label>
+          <label class="modal-form">
+            <span class="modal-form-name"> Коментар</span>
+            <textarea
+              class="modal-user-feedback"
+              name="user-feedback"
+              placeholder="Введіть текст"
+            ></textarea>
+          </label>
+          <label class="modal-accept-policy">
+            <input
+              type="checkbox"
+              name="user-accept-policy"
+              class="checkbox hidden"
+              value="accept-policy"
+            />
+            <span class="checkbox-icon-wrap">
+              <svg class="checkbox-icon" width="11" height="8">
+                <use href="./img/icons.svg#icon-checkbox-accept"></use>
+              </svg>
+            </span>
+            <span class="accept-policy-terms"
+              >Погоджуюся з розсилкою та приймаю <a class="terms" href="">Умови договору</a></span
+            >
+          </label>
+          <button type="submit" class="button modal-callback-button">Відправити</button>
+        </form>
         <button class="modal-button" type="button" data-modal-close>
           <svg class="icon modal-button-icon" width="18" height="18">
             <use href="./img/icons.svg#icon-close"></use>
